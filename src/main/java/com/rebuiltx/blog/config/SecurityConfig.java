@@ -45,10 +45,6 @@ public class SecurityConfig {
 			
 	};
 
-	
-	 @Autowired
-	    private AccessDeniedHandler accessDeniedHandler; // Inject the custom AccessDeniedHandler
-
 	  
 	@Autowired
 	private CustomUserDetailService customUserDetailService;
@@ -108,10 +104,6 @@ public class SecurityConfig {
 		return builder.getAuthenticationManager();
 	}
 	
-	  @Bean
-	    public AccessDeniedHandler accessDeniedHandler() {
-	        return new CustomAccessDeniedHandler();
-    }
-	
+
 
 }
