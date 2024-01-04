@@ -68,7 +68,6 @@ public class SecurityConfig {
 		.authorizeHttpRequests(authz -> authz
 				.requestMatchers(PUBLIC_URLS).permitAll()
 				.requestMatchers(HttpMethod.GET).permitAll()
-//				.hasRole("ADMIN")
 				.anyRequest().authenticated()
 				
 				);
